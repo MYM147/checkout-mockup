@@ -6,7 +6,7 @@ const ItemStatus = () => {
 		<div className='swdc-flex md:swdc-w-2/6 swdc-w-full swdc-ml-2'>
 			<QuantityPrice />
 
-			<div className='swdc-pr-1 swdc-w-1/2 sm:swdc-ml-2'>
+			<div className='swdc-pr-1 swdc-w-1/2 sm:swdc-ml-2 sm:swdc-border-none swdc-border-l swdc-pl-2 swdc-border-[#e5e5e5]'>
 				<h3 className='swdc-text-[#026533] swdc-text-base swdc-font-bold'>
 					In Stock
 				</h3>
