@@ -39,7 +39,7 @@ const NavTabs = () => {
 				</Tab>
 			</TabList>
 
-			<TabPanel className='swdc-px-[30px]'>
+			<TabPanel className='swdc-px-[3.52%]'>
 				<ViewCartPage />
 			</TabPanel>
 			<TabPanel className='swdc-px-[30px]'>{/* Fulfillment */}</TabPanel>

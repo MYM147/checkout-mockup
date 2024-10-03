@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import RemoveProductModal from '../RemoveProductModal/RemoveProductModal';
+import RemoveProductModal from '../Modals/RemoveProductModal';
 
 const InputStepper = ({ onChange, onRemove }) => {
 	const [numberOfItems, setNumberOfItems] = useState(1);

@@ -1,6 +1,6 @@
 import { Button, IconFillWarning, IconRegularWarning } from '@prism/dropcloth';
 import { useState } from 'react';
-import RemoveProductModal from '../RemoveProductModal/RemoveProductModal';
+import RemoveProductModal from '../Modals/RemoveProductModal';
 
 const ProductWarning = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
