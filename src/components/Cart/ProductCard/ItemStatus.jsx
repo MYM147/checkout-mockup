@@ -3,14 +3,14 @@ import QuantityPrice from './QuantityPrice';
 
 const ItemStatus = () => {
 	return (
-		<div className='swdc-flex md:swdc-w-2/6 swdc-w-full swdc-ml-2'>
+		<div className='swdc-flex md:swdc-w-1/3 swdc-w-full'>
 			<QuantityPrice />
 
-			<div className='swdc-pr-1 swdc-w-1/2 sm:swdc-ml-2 sm:swdc-border-none swdc-border-l swdc-pl-2 swdc-border-[#e5e5e5]'>
+			<div className=' sm:swdc-border-none swdc-border-l swdc-border-[#e5e5e5]'>
 				<h3 className='swdc-text-[#026533] swdc-text-base swdc-font-bold'>
 					In Stock
 				</h3>
-				<p className='swdc-text-xs'>
+				<p className='swdc-text-[.8125rem]'>
 					Most orders placed before Noon will be ready same day.
 				</p>
 				<Tooltip

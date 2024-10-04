@@ -3,7 +3,7 @@ import ShoppingCart from './ShoppingCart';
 
 const ViewCartPage = () => {
   return (
-			<div className='md:swdc-flex'>
+			<div className='md:swdc-flex swdc-max-w-[995px]'>
 				<ShoppingCart />
 				<Sidebar />
 			</div>

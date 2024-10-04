@@ -15,7 +15,7 @@ const QuantityPrice = () => {
 	}, [quantity]);
 
 	return (
-		<div className='md:swdc-w-1/2 swdc-mr-4 swdc-pr-5 sm:swdc-pr-3 sm:swdc-mr-1 md:swdc-pr-0 md:swdc-mr-1 lg:swdc-pr-1'>
+		<div className='md:swdc-w-1/2 swdc-mr-4 swdc-pr-5 sm:swdc-pr-3 sm:swdc-mr-1 md:swdc-pr-2 md:swdc-mr-1 lg:swdc-pr-1'>
 			<p className='swdc-text-sm'>
 				<span className='swdc-text-sm'>Your Price:</span>
 				<br />

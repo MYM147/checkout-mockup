@@ -2,18 +2,18 @@ import product from '../../../assets/product.jpg';
 
 const ItemDetails = () => {
 	return (
-		<div className='swdc-w-full swdc-flex swdc-px-2 md:swdc-w-2/3 swdc-mb-2'>
-			<div className='md:swdc-mr-[10px] swdc-pr-[3.52%] swdc-w-[30%]'>
+		<div className='swdc-w-full swdc-flex swdc-px-1 md:swdc-w-8/12 swdc-mb-2'>
+			<div className='md:swdc-mr-[5px] swdc-pr-[3%] swdc-w-[28%]'>
 				<img
 					src={product}
-					width={100}
-					height={100}
+					width={92}
+					height={92}
 					alt='A picture of a product image'
-					className='md:swdc-max-w-[100px] swdc-w-full'
+					className='md:swdc-max-w-[92px] swdc-w-full'
 				/>
 			</div>
 
-			<div className='md:swdc-w-1/2 swdc-w-[70%]'>
+			<div className='swdc-w-[70%]'>
 				<h3 className='swdc-font-bold md:swdc-text-sm swdc-text-xs'>
 					SuperDeck Exterior Waterborne Solid Color Deck Stain
 				</h3>

@@ -3,6 +3,7 @@
 		{
 			"id": "001",
 			"name": "WoodScapes Exterior Acrylic Solid Color House Stain",
+			"image": "./images/woodscapes-exterior-acrylic-solid-color-house-stain.jpeg",
 			"price": 348.70,
 			"salesNumber": "6403-33555",
 			"productNumber": "A15T00054",
@@ -15,6 +16,7 @@
 		{
 			"id": "002",
 			"name": "Emerald Interior Acrylic Latex Paintt",
+			"image": "./images/emerald-interior-acrylic-latex-paint.jpeg",
 			"price": 65.79,
 			"salesNumber": "6510-16925",
 			"productNumber": "K35W00451",
@@ -27,6 +29,7 @@
 		{
 			"id": "003",
 			"name": "Duration Exterior Acrylic Latex",
+			"image": "./images/duration-exterior-acrylic-latex.jpeg",
 			"price": 92.69,
 			"salesNumber": "6504-05681",
 			"productNumber": "K32W00251",
