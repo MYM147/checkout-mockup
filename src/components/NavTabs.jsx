@@ -8,6 +8,7 @@ import {
 	Tab, TabList, TabPanel, Tabs
 } from '@prism/dropcloth';
 import ViewCartPage from './Cart/ViewCartPage';
+import ProductButtons from './ProductButtons';
 
 // IconFillCreditCard, IconFillNotepad, IconFillPackage, IconFillShoppingCart, 
 
@@ -38,6 +39,8 @@ const NavTabs = () => {
 					</span>
 				</Tab>
 			</TabList>
+			
+			<ProductButtons />
 
 			<TabPanel className='swdc-px-[3.52%]'>
 				<ViewCartPage />

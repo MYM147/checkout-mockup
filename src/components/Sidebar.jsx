@@ -1,8 +1,8 @@
 import { IconFillMapPin } from '@prism/dropcloth';
 
 const Sidebar = () => {
-  return (
-		<div className='swdc-order-[2] md:swdc-w-[28%] md:swdc-max-w-[28%] swdc-flex-shrink md:swdc-ml-4 swdc-border swdc-border-[#e5e5e5] sm:swdc-my-2 swdc-h-full'>
+	return (
+		<aside className='swdc-order-[2] md:swdc-w-[28%] md:swdc-max-w-[28%] swdc-flex-shrink md:swdc-ml-4 swdc-border swdc-border-[#e5e5e5] sm:swdc-my-2 swdc-h-full'>
 			<div className='swdc-p-2 swdc-border-b swdc-border-[#e5e5e5]'>
 				<p></p>
 			</div>
@@ -31,22 +31,8 @@ const Sidebar = () => {
 					</dd>
 				</dl>
 			</div>
-			<div className='swdc-p-3 swdc-text-xs'>
-				<label>Job or Project Name / PO:</label>
-				<input />
-			</div>
-			<div className='swdc-p-3 swdc-text-xs'>
-				<div className='swdc-flex'>
-					<p>Subtotal</p>
-					<p>44.99</p>
-				</div>
-				<div className='swdc-flex swdc-text-xs'>
-					<p>Apply Coupon Code</p>
-				</div>
-				<input />
-			</div>
-		</div>
+		</aside>
 	);
-}
+};
 
 export default Sidebar;
