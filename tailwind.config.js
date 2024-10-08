@@ -3,6 +3,7 @@ import dropclothConfig from '@prism/dropcloth/tailwind.preset.js';
 
 export default {
 	mode: 'jit',
+	prefix: 'swdc-',
 	presets: [dropclothConfig],
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {

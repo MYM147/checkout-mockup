@@ -30,7 +30,7 @@ a, button {
   color: #0069ae;
 }
 
-a:hover, button:hover {
+a:hover, Button:hover, button:hover {
   color:#336699;
 }
 
@@ -49,3 +49,15 @@ a:hover, button:hover {
     -moz-appearance: textfield;
   }
 }
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
