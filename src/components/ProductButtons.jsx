@@ -10,7 +10,7 @@ const ProductButtons = () => {
 				Emerald Product
 			</Button>
 			<Button className='swdc-bg-[#026533] hover:swdc-bg-[#194931] swdc-text-sm swdc-capitalize swdc-w-full sm:swdc-w-auto'>
-				Duration Product Acrylic
+				Duration Product
 			</Button>
 		</div>
 	);
