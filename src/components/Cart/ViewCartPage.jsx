@@ -2,7 +2,7 @@ import {
 	IconRegularDelete,
 } from '@prism/dropcloth';
 import { useState } from 'react';
-import ProductButtons from '../ProductButtons';
+import ProductButtons from '../Buttons/ProductButtons';
 import Sidebar from '../Sidebar';
 import EmptyCart from './EmptyCart';
 import ShoppingCart from './ShoppingCart';
