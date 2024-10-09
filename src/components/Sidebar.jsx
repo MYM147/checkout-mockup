@@ -1,9 +1,9 @@
-import { IconFillMapPin, IconRegularHelp, Input } from '@prism/dropcloth';
+// import { IconFillMapPin, IconRegularHelp, Input } from '@prism/dropcloth';
 
 const Sidebar = () => {
 	return (
-		<aside className='swdc-order-[2] md:swdc-w-[28%] md:swdc-max-w-[28%] swdc-flex-shrink md:swdc-ml-4 swdc-border swdc-border-[#e5e5e5] sm:swdc-my-2 swdc-h-full'>
-			<div className='swdc-p-2 swdc-border-b swdc-border-[#e5e5e5]'>
+		<aside className='swdc-order-[2] md:swdc-w-[28%] md:swdc-max-w-[28%] swdc-flex-shrink md:swdc-ml-4 swdc-border swdc-border-[#e5e5e5] sm:swdc-my-2 swdc-h-[770px] swdc-bg-[#dcdcdc]'>
+			{/* <div className='swdc-p-2 swdc-border-b swdc-border-[#e5e5e5]'>
 				<p></p>
 			</div>
 			<div className='swdc-p-3 swdc-text-xs'>
@@ -50,7 +50,7 @@ const Sidebar = () => {
 					<p></p>
 					<input type='text' />
 				</div>
-			</div>
+			</div> */}
 		</aside>
 	);
 };

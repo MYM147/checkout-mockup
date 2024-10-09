@@ -1,10 +1,10 @@
-import NavTabs from './components/NavTabs';
+import ViewCartPage from './components/Cart/ViewCartPage';
 import './index.scss';
 
 function App() {
 	return (
 		<>
-			<NavTabs />
+			<ViewCartPage />
 		</>
 	);
 }
