@@ -1,4 +1,6 @@
 import { Button } from '@prism/dropcloth';
+import products from '../assets/products.json';
+
 
 const ProductButtons = () => {
 	return (
