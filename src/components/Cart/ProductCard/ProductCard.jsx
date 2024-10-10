@@ -2,12 +2,11 @@ import ItemDetails from './ItemDetails';
 import ItemStatus from './ItemStatus';
 import ProductWarning from './ProductWarning';
 
-const ProductCard = () => {
-
+const ProductCard = (selectedProduct) => {
 	return (
 		<>
 			<div className='md:swdc-flex swdc-w-full swdc-mt-4 swdc-h-full'>
-				<ItemDetails />
+				<ItemDetails selectedProduct={selectedProduct} />
 				<ItemStatus />
 			</div>
 			<ProductWarning />
