@@ -4,44 +4,15 @@ import products from '../../assets/products.json';
 
 const ProductButtons = ({ onProductSelect }) => {
 	const handleAddDuration = () => {
-		onProductSelect(
-			products.brands.duration[0].name,
-			products.brands.duration[0].image,
-			products.brands.duration[0].price,
-			products.brands.duration[0].salesNumber,
-			products.brands.duration[0].productNumber,
-			products.brands.duration[0].container.size,
-			products.brands.duration[0].container.sheen,
-			products.brands.duration[0].container.base
-		);
-
-		console.log(products.brands.duration[0].name);
+		onProductSelect(products.brands.duration[0]);
 	};
 
 	const handleAddEmerald = () => {
-		onProductSelect(
-			products.brands.emerald[0].name,
-			products.brands.emerald[0].image,
-			products.brands.emerald[0].price,
-			products.brands.emerald[0].salesNumber,
-			products.brands.emerald[0].productNumber,
-			products.brands.emerald[0].container?.size,
-			products.brands.emerald[0].container?.sheen,
-			products.brands.emerald[0].container?.base
-		);
+		onProductSelect(products.brands.emerald[0]);
 	};
 
 	const handleAddWoodScapes = () => {
-		onProductSelect(
-			products.brands.woodscapes[0].name,
-			products.brands.woodscapes[0].image,
-			products.brands.woodscapes[0].price,
-			products.brands.woodscapes[0].salesNumber,
-			products.brands.woodscapes[0].productNumber,
-			products.brands.woodscapes[0].container?.size,
-			products.brands.woodscapes[0].container?.sheen,
-			products.brands.woodscapes[0].container?.base
-		);
+		onProductSelect(products.brands.woodscapes[0]);
 	};
 
 	return (

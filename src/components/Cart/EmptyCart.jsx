@@ -2,7 +2,7 @@ import { Button } from '@prism/dropcloth';
 
 const EmptyCart = () => {
   return (
-		<div className='swdc-bg-white swdc-mx-auto'>
+		<div className='swdc-bg-white swdc-mx-auto swdc-mt-6'>
 			<div className='swdc-w-full'>
 				<div className='swdc-text-center'>
 					<h2 className='swdc-font-bold swdc-text-[1.375rem] swdc-mb-4'>
