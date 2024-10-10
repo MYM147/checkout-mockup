@@ -10,22 +10,9 @@ const ViewCartPage = () => {
 	const [selectedProduct, setSelectedProduct] = useState(null);
 
 	const handleProductSelect = (product) => {
-		setSelectedProduct((prevState) => {
-			if (!prevState) {
-				return product;
-			}
-			return {
-				...prevState,
-				...product,
-				container: {
-					...prevState.container,
-					...product.container,
-				},
-			};
-		});
+		setSelectedProduct(product);
 		setCartIsEmpty(false);
 	};
-
 
 	const handleDelete = () => {
 		setSelectedProduct(null);
