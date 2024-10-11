@@ -2,7 +2,7 @@
 	"brands": {
 		"duration": [
 			{
-				"id": "001",
+				"id": 1,
 				"name": "Duration Exterior Acrylic Latex",
 				"image": "/images/duration-exterior-acrylic-latex.jpeg",
 				"price": 92.69,
@@ -17,7 +17,7 @@
 		],
 		"emerald": [
 			{
-				"id": "002",
+				"id": 2,
 				"name": "Emerald Interior Acrylic Latex Paint",
 				"image": "/images/emerald-interior-acrylic-latex-paint.jpeg",
 				"price": 65.79,
@@ -32,7 +32,7 @@
 		],
 		"woodscapes": [
 			{
-				"id": "003",
+				"id": 3,
 				"name": "WoodScapes Exterior Acrylic Solid Color House Stain",
 				"image": "/images/woodscapes-exterior-acrylic-solid-color-house-stain.jpeg",
 				"price": 348.7,

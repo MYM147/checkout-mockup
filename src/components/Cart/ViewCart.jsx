@@ -12,6 +12,8 @@ const ViewCartPage = () => {
 	const handleProductSelect = (product) => {
 		setSelectedProduct(product);
 		setCartIsEmpty(false);
+
+		console.log("View Cart  ", product);
 	};
 
 	const handleDelete = () => {
@@ -38,7 +40,7 @@ const ViewCartPage = () => {
 			) : (
 				<div className='swdc-w-full swdc-flex swdc-mx-auto md:swdc-max-w-[942px]'>
 					{!selectedProduct && <div>Loading...</div>}
-					<ShoppingCart product={selectedProduct} />
+					<ShoppingCart selectedProduct={selectedProduct} />
 					<Sidebar />
 				</div>
 			)}

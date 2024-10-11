@@ -6,12 +6,14 @@ import { ProductContext } from '../Utils/ProductContext';
 const ProductButtons = ({ onProductSelect }) => {
 
 	const handleAddDuration = () => {
-		onProductSelect(products.brands.duration[0])
-		console.log(products.brands.duration[0]);
+		onProductSelect(
+			products.brands.duration[0]
+		);
+		console.log('Product Buttons  ', products.brands.duration[0]);
 	}
 
 	const handleAddEmerald = () => {
-		onProductSelect(products.brands.emerald[0])
+		onProductSelect(products.brands.emerald)
 		products.brands.emerald[0] = ProductContext;
 	}
 
@@ -42,7 +44,19 @@ const ProductButtons = ({ onProductSelect }) => {
 };
 
 ProductButtons.propTypes = {
-	onProductSelect: PropTypes.func.isRequired,
+	onProductSelect: PropTypes.shape({
+		id: PropTypes.number,
+		name: PropTypes.string,
+		image: PropTypes.string,
+		price: PropTypes.number,
+		salesNumber: PropTypes.string,
+		productNumber: PropTypes.string,
+		container: PropTypes.shape({
+			size: PropTypes.string,
+			sheen: PropTypes.string,
+			base: PropTypes.string,
+		}),
+	}).isRequired,
 };
 
 export default ProductButtons;
