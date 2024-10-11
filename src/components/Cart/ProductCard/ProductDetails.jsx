@@ -1,7 +1,6 @@
-// ItemDetails.js
 import PropTypes from 'prop-types';
 
-const ItemDetails = ({ product }) => {
+const ProductDetails = ({ product }) => {
 	return (
 		<div className='swdc-w-full swdc-flex swdc-px-1 md:swdc-w-8/12 swdc-mb-2'>
 			{product && (
@@ -48,7 +47,7 @@ const ItemDetails = ({ product }) => {
 	);
 };
 
-ItemDetails.propTypes = {
+ProductDetails.propTypes = {
 	product: PropTypes.shape({
 		name: PropTypes.string,
 		image: PropTypes.string,
@@ -63,4 +62,4 @@ ItemDetails.propTypes = {
 	}).isRequired,
 };
 
-export default ItemDetails;
+export default ProductDetails;

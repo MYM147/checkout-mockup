@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import InputStepper from './InputStepper';
+import ProductQuantity from './ProductQuantity';
 
-const QuantityPrice = () => {
+const ProductPrice = () => {
 	const [quantity, setQuantity] = useState(1);
 	const [totalPrice, setTotalPrice] = useState(44.99);
 
@@ -22,7 +22,7 @@ const QuantityPrice = () => {
 				<strong>44.99</strong>
 			</p>
 
-			<InputStepper onChange={(newQuantity) => setQuantity(newQuantity)} />
+			<ProductQuantity onChange={(newQuantity) => setQuantity(newQuantity)} />
 
 			<p>
 				<span className='swdc-text-sm'>Total:</span>
@@ -33,4 +33,4 @@ const QuantityPrice = () => {
 	);
 };
 
-export default QuantityPrice;
+export default ProductPrice;

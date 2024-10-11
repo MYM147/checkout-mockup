@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import ItemDetails from './ItemDetails';
-import ItemStatus from './ItemStatus';
+import ProductDetails from './ProductDetails';
+import ProductInStock from './ProductInStock';
 import ProductWarning from './ProductWarning';
 
 const ProductCard = ({ selectedProduct }) => {
@@ -8,8 +8,8 @@ const ProductCard = ({ selectedProduct }) => {
 		<>
 			{selectedProduct && (
 				<div className='md:swdc-flex swdc-w-full swdc-mt-4 swdc-h-full'>
-					<ItemDetails product={selectedProduct} />
-					<ItemStatus />
+					<ProductDetails product={selectedProduct} />
+					<ProductInStock />
 				</div>
 			)}
 			<ProductWarning />

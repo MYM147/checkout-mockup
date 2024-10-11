@@ -1,4 +1,4 @@
-import ViewCartPage from './components/Cart/ViewCartPage';
+import ViewCartPage from './components/Cart/ViewCart';
 import './index.scss';
 
 function App() {

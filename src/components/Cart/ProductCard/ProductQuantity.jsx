@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import RemoveProductModal from '../Modals/RemoveProductModal';
 
-const InputStepper = ({ onChange, onRemove }) => {
+const ProductQuantity = ({ onChange, onRemove }) => {
 	const [numberOfItems, setNumberOfItems] = useState(1);
 	const [showModal, setShowModal] = useState(false);
 
@@ -79,9 +79,9 @@ const InputStepper = ({ onChange, onRemove }) => {
 	);
 };
 
-InputStepper.propTypes = {
+ProductQuantity.propTypes = {
 	onChange: PropTypes.func.isRequired,
 	onRemove: PropTypes.func.isRequired,
 };
 
-export default InputStepper;
+export default ProductQuantity;

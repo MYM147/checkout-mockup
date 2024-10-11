@@ -1,8 +1,8 @@
-// import { useState } from 'react';
 import PropTypes from 'prop-types';
 import ProductCard from './ProductCard/ProductCard';
 
 const ShoppingCart = ({ selectedProduct }) => {
+
 	return (
 		<div className='swdc-border swdc-border-[#e5e5e5] swdc-rounded-[10px] swdc-bg-white swdc-order-[1] md:swdc-flex-shrink-0 md:swdc-w-[calc(72%_-_2rem)] md:swdc-max-w-[calc(72%_-_2rem)] swdc-h-full'>
 			<div className='swdc-w-full'>
@@ -11,7 +11,8 @@ const ShoppingCart = ({ selectedProduct }) => {
 						1 Item(s)
 					</p>
 				</div>
-				<ProductCard selectedProduct={selectedProduct} />
+				<ProductCard onProductSelect={selectedProduct}
+				/>
 			</div>
 		</div>
 	);
@@ -34,4 +35,3 @@ ShoppingCart.propTypes = {
 };
 
 export default ShoppingCart;
-
