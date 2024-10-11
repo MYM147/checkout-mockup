@@ -7,7 +7,7 @@ const ProductButtons = ({ onProductSelect }) => {
 
 	const handleAddDuration = () => {
 		onProductSelect(products.brands.duration[0])
-		products.brands.duration[0] = ProductContext
+		console.log(products.brands.duration[0]);
 	}
 
 	const handleAddEmerald = () => {
