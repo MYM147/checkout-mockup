@@ -44,19 +44,7 @@ const ProductButtons = ({ onProductSelect }) => {
 };
 
 ProductButtons.propTypes = {
-	onProductSelect: PropTypes.shape({
-		id: PropTypes.number,
-		name: PropTypes.string,
-		image: PropTypes.string,
-		price: PropTypes.number,
-		salesNumber: PropTypes.string,
-		productNumber: PropTypes.string,
-		container: PropTypes.shape({
-			size: PropTypes.string,
-			sheen: PropTypes.string,
-			base: PropTypes.string,
-		}),
-	}).isRequired,
-};
+	onProductSelect: PropTypes.func.isRequired,
+}; 
 
 export default ProductButtons;
