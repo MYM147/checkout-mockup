@@ -6,19 +6,37 @@ import EmptyCart from './EmptyCart';
 import ShoppingCart from './ShoppingCart';
 
 const ViewCartPage = () => {
-	const [cartIsEmpty, setCartIsEmpty] = useState(true);
-	const [selectedProduct, setSelectedProduct] = useState(null);
+	const [cartItems, setCartItems] = useState([]);
+	const [nextId, setNextId] = useState(1);
 
 	const handleProductSelect = (product) => {
-		setSelectedProduct(product);
-		setCartIsEmpty(false);
-
-		console.log("View Cart  ", product);
+		const newProduct = {
+			...product,
+			id: nextId,
+			quantity: 1,
+			imageUrl: product.imageUrl || '/path/to/default/image.jpg', // Provide a default image path
+		};
+		setCartItems((prevItems) => [...prevItems, newProduct]);
+		setNextId((prevId) => prevId + 1);
+		console.log('View Cart ', newProduct);
 	};
 
 	const handleDelete = () => {
-		setSelectedProduct(null);
-		setCartIsEmpty(true);
+		setCartItems([]);
+	};
+
+	const updateQuantity = (productId, newQuantity) => {
+		setCartItems((prevItems) =>
+			prevItems.map((item) =>
+				item.id === productId ? { ...item, quantity: newQuantity } : item
+			)
+		);
+	};
+
+	const removeFromCart = (productId) => {
+		setCartItems((prevItems) =>
+			prevItems.filter((item) => item.id !== productId)
+		);
 	};
 
 	return (
@@ -35,12 +53,15 @@ const ViewCartPage = () => {
 				</div>
 			</div>
 			<ProductButtons onProductSelect={handleProductSelect} />
-			{cartIsEmpty ? (
+			{cartItems.length === 0 ? (
 				<EmptyCart />
 			) : (
 				<div className='swdc-w-full swdc-flex swdc-mx-auto md:swdc-max-w-[942px]'>
-					{!selectedProduct && <div>Loading...</div>}
-					<ShoppingCart selectedProduct={selectedProduct} />
+					<ShoppingCart
+						cartItems={cartItems}
+						updateQuantity={updateQuantity}
+						removeFromCart={removeFromCart}
+					/>
 					<Sidebar />
 				</div>
 			)}
