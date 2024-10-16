@@ -1,8 +1,9 @@
 import { Button, IconFillWarning, IconRegularWarning } from '@prism/dropcloth';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import RemoveProductModal from '../Modals/RemoveProductModal';
 
-const ProductWarning = () => {
+const ProductWarning = ({ onRemove }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const handleOpenModal = () => {
@@ -10,16 +11,15 @@ const ProductWarning = () => {
 	};
 
 	const handleCloseModal = () => {
-		setIsModalOpen(false)
+		setIsModalOpen(false);
 	};
 
 	const handleConfirmRemoval = () => {
-		console.log('Item confirmed for removal');
+		onRemove();
 		handleCloseModal();
-		// Add actual removal logic here
 	};
 
-  return (
+	return (
 		<>
 			<div className='md:swdc-ml-[15%] sm:swdc-ml-2'>
 				<div className='swdc-text-xs sm:swdc-flex-col'>
@@ -30,7 +30,7 @@ const ProductWarning = () => {
 									<Button
 										variant='text'
 										className='swdc-text-[#0069ae] swdc-text-[0.95em] hover:swdc-bg-white swdc-normal-case swdc-tracking-widest'>
-											Edit
+										Edit
 									</Button>
 								</li>
 								<li className='swdc-border swdc-h-2 swdc-my-auto swdc-mx-[-5px]'></li>
@@ -46,7 +46,6 @@ const ProductWarning = () => {
 									<Button
 										variant='text'
 										onClick={handleOpenModal}
-										showModal
 										className='swdc-text-[#0069ae] swdc-text-[0.95em] hover:swdc-bg-white swdc-normal-case swdc-tracking-widest'>
 										Remove
 									</Button>
@@ -54,7 +53,6 @@ const ProductWarning = () => {
 							</ul>
 						</div>
 					</div>
-
 					<div className='swdc-flex swdc-w-[73%] md:swdc-relative md:swdc-left-1 swdc-mb-2 swdc-px-2 swdc-order-1'>
 						<div className='swdc-relative swdc-mr-1 swdc-align-middle'>
 							<IconFillWarning className='swdc-icon-2 swdc-fill-[#fefe04]' />
@@ -70,7 +68,6 @@ const ProductWarning = () => {
 					</div>
 				</div>
 			</div>
-
 			<RemoveProductModal
 				isOpen={isModalOpen}
 				onClose={handleCloseModal}
@@ -78,6 +75,10 @@ const ProductWarning = () => {
 			/>
 		</>
 	);
+};
+
+ProductWarning.propTypes = {
+	onRemove: PropTypes.func.isRequired,
 };
 
 export default ProductWarning;

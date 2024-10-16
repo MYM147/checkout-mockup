@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import RemoveProductModal from '../Modals/RemoveProductModal';
 
-const ProductQuantity = ({ onChange, price }) => {
-	const [numberOfItems, setNumberOfItems] = useState(1);
+const ProductQuantity = ({ onChange, price, quantity, onRemove }) => {
+	const [numberOfItems, setNumberOfItems] = useState(quantity);
 	const [showModal, setShowModal] = useState(false);
-	const [totalPrice, setTotalPrice] = useState(price);
+	const [totalPrice, setTotalPrice] = useState(price * quantity);
 
 	useEffect(() => {
 		setTotalPrice(numberOfItems * price);
@@ -13,7 +13,7 @@ const ProductQuantity = ({ onChange, price }) => {
 
 	const handleQuantityChange = (newQuantity) => {
 		setNumberOfItems(newQuantity);
-		onChange(newQuantity, newQuantity * price);
+		onChange(newQuantity);
 	};
 
 	const handleDecrement = () => {
@@ -30,7 +30,7 @@ const ProductQuantity = ({ onChange, price }) => {
 
 	const handleConfirmRemoval = () => {
 		setShowModal(false);
-		onChange(0, 0); // Assuming 0 means remove the product
+		onRemove();
 	};
 
 	const handleCloseModal = () => {
@@ -71,7 +71,7 @@ const ProductQuantity = ({ onChange, price }) => {
 						</button>
 					</span>
 				</div>
-				<div className='swdc-mt-2'>
+				<div className='swdc-mt-2 swdc-hidden'>
 					<span className='swdc-text-sm'>Total: ${totalPrice.toFixed(2)}</span>
 				</div>
 			</form>
@@ -89,6 +89,9 @@ const ProductQuantity = ({ onChange, price }) => {
 ProductQuantity.propTypes = {
 	onChange: PropTypes.func.isRequired,
 	price: PropTypes.number.isRequired,
+	quantity: PropTypes.number.isRequired,
+	onRemove: PropTypes.func.isRequired,
 };
+
 
 export default ProductQuantity;

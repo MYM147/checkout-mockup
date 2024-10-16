@@ -21,7 +21,7 @@ const ProductDetails = ({ product }) => {
 	console.log('Product in ProductDetails:', product);
 
 	return (
-		<div className='swdc-w-full swdc-flex swdc-px-1 md:swdc-w-8/12 swdc-mb-2'>
+		<div className='swdc-w-full swdc-flex swdc-px-1 md:swdc-w-7/12 swdc-mb-2'>
 			{product && (
 				<>
 					<div className='md:swdc-mr-[5px] swdc-pr-[3%] swdc-w-[28%]'>

@@ -1,53 +1,41 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
 import ProductQuantity from './ProductQuantity';
 
-const ProductPrice = ({ product }) => {
-	const [quantity, setQuantity] = useState(1);
-	const [totalPrice, setTotalPrice] = useState(0);
-
-	useEffect(() => {
-		if (product && typeof product.price === 'number') {
-			const newTotalPrice = quantity * product.price;
-			setTotalPrice(newTotalPrice.toFixed(2));
-		}
-	}, [quantity, product]);
-
+const ProductPrice = ({ price, quantity, updateQuantity, onRemove }) => {
 	const handleQuantityChange = (newQuantity) => {
-		setQuantity(newQuantity);
+		updateQuantity(newQuantity);
 	};
 
-	if (!product) {
-		return <div>Loading product information...</div>;
-	}
-
 	return (
-		<div className='md:swdc-w-1/2 swdc-mr-4 swdc-pr-5 sm:swdc-pr-3 sm:swdc-mr-1 md:swdc-pr-0 md:swdc-mr-1 lg:swdc-pr-1'>
-			<p className='swdc-text-sm'>
-				<span className='swdc-text-sm'>Your Price:</span>
-				<br />
-				<strong>${product.price ? product.price.toFixed(2) : 'N/A'}</strong>
-			</p>
-			{typeof product.price === 'number' && (
+		<div>
+			<div className='swdc-justify-between swdc-items-center swdc-mr-2'>
+				<p className='swdc-text-sm'>
+					Your Price:
+					<br />
+					<span className='swdc-font-bold'>${price}</span>
+				</p>
 				<ProductQuantity
 					onChange={handleQuantityChange}
-					price={product.price}
+					price={price}
+					quantity={quantity}
+					onRemove={onRemove}
 				/>
-			)}
-			<p>
-				<span className='swdc-text-sm'>Total:</span>
-				<br />
-				<strong>${totalPrice}</strong>
-			</p>
+				<p className='swdc-text-sm'>
+					Total: <br />
+					<span className='swdc-font-bold swdc-text-lg'>
+						${(price * quantity).toFixed(2)}
+					</span>
+				</p>
+			</div>
 		</div>
 	);
 };
 
 ProductPrice.propTypes = {
-	product: PropTypes.shape({
-		price: PropTypes.number,
-		// Add other product properties if needed
-	}),
+	price: PropTypes.number.isRequired,
+	quantity: PropTypes.number.isRequired,
+	updateQuantity: PropTypes.func.isRequired,
+	onRemove: PropTypes.func.isRequired,
 };
 
 export default ProductPrice;

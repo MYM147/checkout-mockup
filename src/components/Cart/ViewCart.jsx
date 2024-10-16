@@ -5,7 +5,7 @@ import Sidebar from '../Sidebar';
 import EmptyCart from './EmptyCart';
 import ShoppingCart from './ShoppingCart';
 
-const ViewCartPage = () => {
+const ViewCart = () => {
 	const [cartItems, setCartItems] = useState([]);
 	const [nextId, setNextId] = useState(1);
 
@@ -14,7 +14,7 @@ const ViewCartPage = () => {
 			...product,
 			id: nextId,
 			quantity: 1,
-			imageUrl: product.imageUrl || '/path/to/default/image.jpg', // Provide a default image path
+			imageUrl: product.imageUrl || '/path/to/default/image.jpg',
 		};
 		setCartItems((prevItems) => [...prevItems, newProduct]);
 		setNextId((prevId) => prevId + 1);
@@ -69,4 +69,4 @@ const ViewCartPage = () => {
 	);
 };
 
-export default ViewCartPage;
+export default ViewCart;

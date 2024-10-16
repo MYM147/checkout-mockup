@@ -3,30 +3,32 @@ import ProductDetails from './ProductDetails';
 import ProductInStock from './ProductInStock';
 import ProductWarning from './ProductWarning';
 
-const ProductCard = ({ selectedProduct }) => {
-	console.log('Product Card ', selectedProduct);
-
-	if (!selectedProduct) {
-		return <div>No product selected</div>;
-	}
+const ProductCard = ({ product, updateQuantity, removeFromCart }) => {
+	const handleRemove = () => {
+		removeFromCart(product.id);
+	};
 
 	return (
-		<>
-			<div className='md:swdc-flex swdc-w-full swdc-mt-4 swdc-h-full'>
-				<ProductDetails product={selectedProduct} />
-				<ProductInStock product={selectedProduct} />
+		<div className='swdc-flex swdc-flex-col swdc-border-b swdc-border-[#e5e5e5] swdc-py-4'>
+			<div className='md:swdc-flex md:swdc-flex-row'>
+				<ProductDetails product={product} />
+				<ProductInStock
+					product={product}
+					updateQuantity={updateQuantity}
+					onRemove={handleRemove}
+				/>
 			</div>
-			<ProductWarning />
-		</>
+			<ProductWarning onRemove={handleRemove} />
+		</div>
 	);
 };
 
 ProductCard.propTypes = {
-	selectedProduct: PropTypes.shape({
-		id: PropTypes.number,
-		name: PropTypes.string,
+	product: PropTypes.shape({
+		id: PropTypes.number.isRequired,
+		name: PropTypes.string.isRequired,
 		image: PropTypes.string,
-		price: PropTypes.number,
+		price: PropTypes.number.isRequired,
 		salesNumber: PropTypes.string,
 		productNumber: PropTypes.string,
 		container: PropTypes.shape({
@@ -35,6 +37,8 @@ ProductCard.propTypes = {
 			base: PropTypes.string,
 		}),
 	}).isRequired,
+	updateQuantity: PropTypes.func.isRequired,
+	removeFromCart: PropTypes.func.isRequired,
 };
 
 export default ProductCard;
