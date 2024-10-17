@@ -21,10 +21,6 @@ const ViewCart = () => {
 		console.log('View Cart ', newProduct);
 	};
 
-	// const handleDelete = () => {
-	// 	setCartItems([]);
-	// };
-
 	const updateQuantity = (productId, newQuantity) => {
 		setCartItems((prevItems) =>
 			prevItems.map((item) =>
