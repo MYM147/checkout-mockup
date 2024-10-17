@@ -1,11 +1,11 @@
-import NavTabs from './components/NavTabs';
+import ViewCart from './components/Cart/ViewCart';
 import './index.scss';
 
 function App() {
 	return (
-		<>
-			<NavTabs />
-		</>
+		<div className='swdc-bg-[#ededed] swdc-h-[100vh]'>
+			<ViewCart />
+		</div>
 	);
 }
 
